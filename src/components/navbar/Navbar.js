@@ -1,40 +1,29 @@
 import React from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
-export const Header = () => {
+const header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
-        Fatih's Kitchen
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <a className="nav-item nav-link" href="#">
-            Home <span className="sr-only">(current)</span>
-          </a>
-          <a className="nav-item nav-link" href="#">
-            About
-          </a>
-          <a className="nav-item nav-link" href="#">
-            GitHub
-          </a>
-          <a className="nav-item nav-link" href="#">
-            Login
-          </a>
-        </div>
-      </div>
-    </nav>
+    <Navbar bg="light" expand="lg">
+      <LinkContainer to="/">
+        <Navbar.Brand>Fatih's Kitchen</Navbar.Brand>
+      </LinkContainer>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <LinkContainer to="/about">
+            <Nav.Link>About</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/github">
+            <Nav.Link>GitHub</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/login">
+            <Nav.Link>Login</Nav.Link>
+          </LinkContainer>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Header;
+export default header;
