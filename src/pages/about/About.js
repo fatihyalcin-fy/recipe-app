@@ -1,14 +1,17 @@
 import React from "react";
+import "./About.css";
 
 export const About = () => {
   return (
-    <div
-      className="container-fluid vh-100"
-      style={{
-        backgroundImage: `url("https://img.freepik.com/free-photo/top-view-recipe-book-still-life-concept_23-2149055996.jpg?t=st=1649110476~exp=1649111076~hmac=200679393026ce1947380949542efd2921bee9f3c3109bd5364235516b5a24a0&w=900")`,
-      }}
-    >
+    <div className="container-fluid vh-100 image">
       <h1 className="text-center pt-5 ">Eat About Feel Good</h1>
+      <div className="text-center">
+        <img
+          src="https://img.freepik.com/free-photo/front-view-chef-sprinkled-flour-raw-fish-slices-cutting-board-vegetables-wood-serving-board-knife-kitchen-table_179666-44301.jpg?w=900"
+          className="rounded w-25 shadow-lg p-3 bg-white rounded"
+          alt="..."
+        />
+      </div>
       <section className="vh-100">
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
@@ -44,15 +47,6 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <div>
-        <div className="text-center">
-          <img
-            src="https://img.freepik.com/free-photo/front-view-chef-sprinkled-flour-raw-fish-slices-cutting-board-vegetables-wood-serving-board-knife-kitchen-table_179666-44301.jpg?w=900"
-            className="rounded img-thumbnail w-25 mt-5 shadow-lg p-3 mb-5 bg-white rounded"
-            alt="..."
-          />
-        </div>
-      </div>
     </div>
   );
 };
